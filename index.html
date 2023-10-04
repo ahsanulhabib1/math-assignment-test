@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <title>Assignment & Lab Cover Generator</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- Button to open the popup -->
+  <div class="container">
+    <button class="btn btn-success" onclick="togglePopup('equation-popup')">
+      Equation
+    </button>
+
+
+  <!-- Popup assignment form -->
+  <div id="equation-popup" class="popup">
+    <div class="popup-content">
+      <form method="post" class="form-container" id="formData">
+        <h1>Enter your equation:</h1>
+        <!-- <h2>Enter Your Equation:</h2> -->
+        <!-- <div class="write"> -->
+          <input type="text" class="write" id="eq1text">
+        <!-- </div> -->
+        <h2 id="result"></h2>
+        <button class="btn btn-success assgnr" placeholder="Submit" onclick="equation()" type="submit">
+          Analyze
+        </button>
+      </form>
+    </div>
+    <span class="close-btn" onclick="togglePopup('equation-popup')">&times;</span>
+  </div>
+
+      <!-- Popup assignment form -->
+  <div id="equation-popup" class="popup">
+    <div class="popup-content">
+      <form method="post" class="form-container" id="formData">
+        <h1>Enter your equation:</h1>
+        <!-- <h2>Enter Your Equation:</h2> -->
+        <!-- <div class="write"> -->
+          <input type="text" class="write" id="eq1text">
+        <!-- </div> -->
+        <h2 id="result"></h2>
+        <button class="btn btn-success assgnr" placeholder="Submit" onclick="equation()" type="submit">
+          Analyze
+        </button>
+      </form>
+    </div>
+    <span class="close-btn" onclick="togglePopup('equation-popup')">&times;</span>
+  </div>
+
+  <!-- Popup lab cover form -->
+  <div id="labcover-popup" class="popup">
+    <div class="popup-content">
+      <form method="post" class="form-container" id="formDataLab">
+        <h1>Lab Cover</h1>
+
+        <button class="btn btn-success labgnr" placeholder="Submit" onclick="MakeLabCover()" type="submit">
+          Generate PDF
+        </button>
+      </form>
+    </div>
+    <span class="close-btn" onclick="togglePopup('labcover-popup')">&times;</span>
+  </div>
+
+  <script src="scripts/popup.js"></script>
+    <script src="scripts/equation.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+</body>
+
+</html>
