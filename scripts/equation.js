@@ -5,7 +5,6 @@ function equation(){
     if (eqn.length < 5) {
     res.innerHTML="Invalid equation format. Please use 'y = constant' or 'x = constant' format.";
 } else {
-    // Extract the relevant parts of the equation
     const lhs = eqn.substring(0, 2);
     const rhs = eqn.substring(4);
         if (lhs === "y " && rhs !== "") {
