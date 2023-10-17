@@ -15,41 +15,55 @@
     <div class="button-container">
       <div class="left container">
       <button class="btn btn-success" onclick="togglePopup('equation-popup')">
-        Equation
+        Equation parallel to axis
       </button>
   
       <button class="btn btn-success" onclick="togglePopup('slope-popup')">
-          Slope
+        Equation in points slope formation
      </button>
   
           <button class="btn btn-success" onclick="togglePopup('intercept-popup')">
-            Intercept
+            Intercept of X-Y axis
        </button>
 
        <button class="btn btn-success" onclick="togglePopup('twoline-popup')">
-        Twoline
+        Equation passing through the intersection of two line
    </button>
 
    <button class="btn btn-success" onclick="togglePopup('distance-popup')">
-    Distance
+    Perpendicular Distance
 </button>
+
+<button class="btn btn-success" onclick="togglePopup('concurrency-popup')">
+  Concurrency Check
+</button>
+
 </div>
 
 <div class="right container">
-<button class="btn btn-success" onclick="togglePopup('concurrency-popup')">
-  Concurrency
-</button>
 
 <button class="btn btn-success" onclick="togglePopup('area-popup')">
-  Area
+  Area of triangle formed
+</button>
+
+<button class="btn btn-success" onclick="togglePopup('perpendicular-popup1')">
+  Find Perpendicular Line of an equation
+</button>
+
+<button class="btn btn-success" onclick="togglePopup('perpendicular-popup2')">
+  Find Perpendicular Line of a line which passes 2 point
+</button>
+
+<button class="btn btn-success" onclick="togglePopup('perpendicular-popup3')">
+  Perpendicularity of 2 Line
 </button>
 
 <button class="btn btn-success" onclick="togglePopup('parellelism-popup')">
-  Parallelism
+  Parellelism
 </button>
 
 <button class="btn btn-success" onclick="togglePopup('polar-popup')">
-  Polar
+  Polar straight line
 </button>
 </div>
   </div>
@@ -72,16 +86,18 @@
     <div class="popup-content">
       <form method="post" class="form-container" id="formData">
         <h1>Enter your equation of the straight line (ax+by+c=0):</h1>
-          <input type="text" class="write" id="slope1-text">
+          <input type="text" class="write" id="slope1-text" placeholder="ax+by+c=0">
         <h2 id="slope-result1"></h2>
         <button class="btn btn-success assgnr" placeholder="Submit" onclick="slope1()" type="submit">
           Determine Slope
         </button><br><br>
         <h1>Enter the coordinates of a point(x,y):</h1>
-        <input type="text" class="write" id="slope2-text1" placeholder="x">
-        <input type="text" class="write" id="slope2-text2" placeholder="y">
+        <div class="coordinate-box">
+          <input type="text" class="write" id="slope2-text1" placeholder="x">
+          <input type="text" class="write" id="slope2-text2" placeholder="y">
+        </div>
         <h1>Enter the slope of the straight line:</h1>
-        <input type="text" class="write" id="slope2-text3" placeholder="y">
+        <input type="text" class="write" id="slope2-text3" placeholder="Slope">
         <h2 id="slope-result2"></h2>
         <button class="btn btn-success assgnr" placeholder="Submit" onclick="slope1()" type="submit">
           Determine Equation
@@ -95,7 +111,7 @@
     <div class="popup-content">
       <form method="post" class="form-container" id="formData">
         <h1>Enter your equation of the straight line (ax+by+c=0):</h1>
-          <input type="text" class="write" id="intercept-text">
+          <input type="text" class="write" id="intercept-text" placeholder="ax+by+c=0">
         <h2 id="intercept-result1"></h2>
         <h2 id="intercept-result2"></h2>
         <h2 id="intercept-result3"></h2>
@@ -111,9 +127,9 @@
     <div class="popup-content">
       <form method="post" class="form-container" id="formData">
         <h1>Enter your equation of the straight line 1 (ax+by+c=0):</h1>
-        <input type="text" class="write" id="twoline-text1">
+        <input type="text" class="write" id="twoline-text1" placeholder="ax+by+c=0">
         <h1>Enter your equation of the straight line 1 (ax+by+c=0):</h1>
-        <input type="text" class="write" id="twoline-text2">
+        <input type="text" class="write" id="twoline-text2" placeholder="ax+by+c=0">
         <h2 id="twoline-result1"></h2>
         <h2 id="twoline-result2"></h2>
         <button class="btn btn-success assgnr" placeholder="Submit" onclick="intercept()" type="submit">
@@ -128,12 +144,11 @@
     <div class="popup-content">
       <form method="post" class="form-container" id="formData">
         <h1>Enter your equation of the straight line(ax+by+c=0):</h1>
-        <input type="text" class="write" id="distance-text">
+        <input type="text" class="write" id="distance-text" placeholder="ax+by+c=0">
         <h1>Enter the coordinates of the point:</h1>
         <input type="text" class="write" id="distancex-text" placeholder="x:">
         <input type="text" class="write" id="distancey-text" placeholder="y:">
         <h2 id="distance-result"></h2>
-        <!-- <h2 id="intercept-result3"></h2> -->
         <button class="btn btn-success assgnr" placeholder="Submit" onclick="distance()" type="submit">
           Determine Distance
         </button>
@@ -146,13 +161,12 @@
     <div class="popup-content">
       <form method="post" class="form-container" id="formData">
         <h1>Enter your equation of the straight line1(ax+by+c=0):</h1>
-        <input type="text" class="write" id="concurrency-text1">
+        <input type="text" class="write" id="concurrency-text1" placeholder="ax+by+c=0">
         <h1>Enter your equation of the straight line2(ax+by+c=0):</h1>
-        <input type="text" class="write" id="concurrency-text2">
+        <input type="text" class="write" id="concurrency-text2" placeholder="ax+by+c=0">
         <h1>Enter your equation of the straight line3(ax+by+c=0):</h1>
-        <input type="text" class="write" id="concurrency-text3">
+        <input type="text" class="write" id="concurrency-text3" placeholder="ax+by+c=0">
         <h2 id="concurrency-result"></h2>
-        <!-- <h2 id="intercept-result3"></h2> -->
         <button class="btn btn-success assgnr" placeholder="Submit" onclick="concurrency()" type="submit">
           Determine Concurrency
         </button>
@@ -164,15 +178,13 @@
   <div id="area-popup" class="popup">
     <div class="popup-content">
       <form method="post" class="form-container" id="formData">
-        <h1 style="color:red">Under Construction<h1>
         <h1>Enter your equation of the straight line1(ax+by+c=0):</h1>
-        <input type="text" class="write" id="area-text1">
+        <input type="text" class="write" id="area-text1" placeholder="ax+by+c=0">
         <h1>Enter your equation of the straight line2(ax+by+c=0):</h1>
-        <input type="text" class="write" id="area-text2">
+        <input type="text" class="write" id="area-text2" placeholder="ax+by+c=0">
         <h1>Enter your equation of the straight line3(ax+by+c=0):</h1>
-        <input type="text" class="write" id="area-text3">
+        <input type="text" class="write" id="area-text3" placeholder="ax+by+c=0">
         <h2 id="area-result"></h2>
-        <!-- <h2 id="intercept-result3"></h2> -->
         <button class="btn btn-success assgnr" placeholder="Submit" onclick="area()" type="submit">
           Determine Area
         </button>
@@ -180,23 +192,87 @@
     </div>
     <span class="close-btn" onclick="togglePopup('area-popup')">&times;</span>
   </div>
+  <div id="perpendicular-popup1" class="popup">
+    <div class="popup-content">
+      <form method="post" class="form-container" id="formData">
+        <h1>Enter your equation of the straight line1(ax+by+c=0):</h1>
+        <input type="text" class="write" id="perpendicularity-text1" placeholder="ax+by+c=0">
+        <h1>Enter the coordinates of the point (x0, y0):</h1>
+        <div class="coordinate-box">
+        <input type="text" class="write" id="perpendicularity-text2" placeholder="x0">
+        <input type="text" class="write" id="perpendicularity-text3" placeholder="y0">
+      </div>
+        <h2 id="perpendicularity-result1"></h2>
+        <button class="btn btn-success assgnr" placeholder="Submit" onclick="perpendicularline()" type="submit">
+          Determine Perpendicular Line
+        </button>
+      </form>
+    </div>
+    <span class="close-btn" onclick="togglePopup('perpendicular-popup1')">&times;</span>
+  </div>
+
+  <div id="perpendicular-popup2" class="popup">
+    <div class="popup-content">
+      <form method="post" class="form-container" id="formData">
+        <h1>Enter the coordinates of the point (x1, y1):</h1>
+        <div class="coordinate-box">
+        <input type="text" class="write" id="perpendicularity2-text1" placeholder="x1">
+        <input type="text" class="write" id="perpendicularity2-text2" placeholder="y1">
+        </div>
+        <h1>Enter the coordinates of the point (x2, y2):</h1>
+        <div class="coordinate-box">
+        <input type="text" class="write" id="perpendicularity2-text3" placeholder="x2">
+        <input type="text" class="write" id="perpendicularity2-text4" placeholder="y2">
+      </div>
+      <h1>Enter the coordinates of the point (x3, y3):</h1>
+      <div class="coordinate-box">
+      <input type="text" class="write" id="perpendicularity2-text5" placeholder="x2">
+      <input type="text" class="write" id="perpendicularity2-text6" placeholder="y2">
+    </div>
+        <h2 id="perpendicularity-result21"></h2>
+        <h2 id="perpendicularity-result22"></h2>
+        <button class="btn btn-success assgnr" placeholder="Submit" onclick="perpendicularline2()" type="submit">
+          Determine Perpendicular Line
+        </button>
+      </form>
+    </div>
+    <span class="close-btn" onclick="togglePopup('perpendicular-popup2')">&times;</span>
+  </div>
+
+  <div id="perpendicular-popup3" class="popup">
+    <div class="popup-content">
+      <form method="post" class="form-container" id="formData">
+        <h1 style="color:red">Under Construction</h1>
+        <h1>Enter your equation of the straight line1(ax+by+c=0):</h1>
+        <input type="text" class="write" id="perpendicularity3-text1" placeholder="ax+by+c=0">
+        <h1>Enter your equation of the straight line2(ax+by+c=0):</h1>
+        <input type="text" class="write" id="perpendicularity3-text2" placeholder="ax+by+c=0">
+        <h2 id="perpendicularity3-result1"></h2>
+        <button class="btn btn-success assgnr" placeholder="Submit" onclick="perpendicularline3()" type="submit">
+          Determine Perpendicular Line
+        </button>
+      </form>
+    </div>
+    <span class="close-btn" onclick="togglePopup('perpendicular-popup3')">&times;</span>
+  </div>
+  
   <div id="parellelism-popup" class="popup">
     <div class="popup-content">
       <form method="post" class="form-container" id="formData">
         <h1 style="color:red">Under Construction</h1>
         <h1>Enter your equation of the straight line1(ax+by+c=0):</h1>
-        <input type="text" class="write" id="parellelism-text1">
+        <input type="text" class="write" id="parellelism-text1" placeholder="ax+by+c=0">
         <h1>Enter your equation of the straight line2(ax+by+c=0):</h1>
-        <input type="text" class="write" id="parellelism-text2">
+        <input type="text" class="write" id="parellelism-text2" placeholder="ax+by+c=0">
         <h2 id="parellelism-result"></h2>
-        <!-- <h2 id="intercept-result3"></h2> -->
         <button class="btn btn-success assgnr" placeholder="Submit" onclick="parellelism()" type="submit">
-          Determine Parellelism
+          Determine Perpendicular Line
         </button>
       </form>
     </div>
     <span class="close-btn" onclick="togglePopup('parellelism-popup')">&times;</span>
   </div>
+
   <div id="polar-popup" class="popup">
     <div class="popup-content">
       <form method="post" class="form-container" id="formData">
@@ -207,7 +283,6 @@
         <input type="text" class="write" id="polar-text21" placeholder="r2">
         <input type="text" class="write" id="polar-text22" placeholder="θ2">
         <h2 id="polar-result"></h2>
-        <!-- <h2 id="intercept-result3"></h2> -->
         <button class="btn btn-success assgnr" placeholder="Submit" onclick="polar()" type="submit">
           Determine Equation
         </button>
@@ -224,6 +299,9 @@
   <script src="scripts/distance.js"></script>
   <script src="scripts/concurrency.js"></script>
   <script src="scripts/area.js"></script>
+  <script src="scripts/perpendicular1.js"></script>
+  <script src="scripts/perpendicular2.js"></script>
+  <script src="scripts/perpendicular3.js"></script>
   <script src="scripts/parellelism.js"></script>
   <script src="scripts/polar.js"></script>
     <script
