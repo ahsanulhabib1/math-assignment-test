@@ -51,15 +51,36 @@ form7.addEventListener("submit", function (e) {
   e.preventDefault();
   
 });
-var form8 = document.getElementById("parellelism-popup");
+var form81 = document.getElementById("perpendicular-popup1");
 
-form8.addEventListener("submit", function (e) {
+form81.addEventListener("submit", function (e) {
   e.preventDefault();
   
 });
-var form9 = document.getElementById("polar-popup");
+var form82 = document.getElementById("perpendicular-popup2");
+
+form82.addEventListener("submit", function (e) {
+  e.preventDefault();
+  
+});
+var form83 = document.getElementById("perpendicular-popup3");
+
+form83.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+
+  
+});
+var form9 = document.getElementById("parellelism-popup");
 
 form9.addEventListener("submit", function (e) {
+  e.preventDefault();
+  
+});
+
+var form10 = document.getElementById("polar-popup");
+
+form10.addEventListener("submit", function (e) {
   e.preventDefault();
   
 });
