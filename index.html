@@ -146,8 +146,10 @@
         <h1>Enter your equation of the straight line(ax+by+c=0):</h1>
         <input type="text" class="write" id="distance-text" placeholder="ax+by+c=0">
         <h1>Enter the coordinates of the point:</h1>
+        <div class="coordinate-box">
         <input type="text" class="write" id="distancex-text" placeholder="x:">
         <input type="text" class="write" id="distancey-text" placeholder="y:">
+        </div>
         <h2 id="distance-result"></h2>
         <button class="btn btn-success assgnr" placeholder="Submit" onclick="distance()" type="submit">
           Determine Distance
@@ -275,11 +277,15 @@
     <div class="popup-content">
       <form method="post" class="form-container" id="formData">
         <h1>Enter the polar co-ordinates of point(r1,θ1):</h1>
+        <div class="coordinate-box">
         <input type="text" class="write" id="polar-text11" placeholder="r1">
         <input type="text" class="write" id="polar-text12" placeholder="θ1">
+        </div>
         <h1>Enter the polar co-ordinates of point(r2,θ2):</h1>
+        <div class="coordinate-box">
         <input type="text" class="write" id="polar-text21" placeholder="r2">
         <input type="text" class="write" id="polar-text22" placeholder="θ2">
+        </div>
         <h2 id="polar-result"></h2>
         <button class="btn btn-success assgnr" placeholder="Submit" onclick="polar()" type="submit">
           Determine Equation
